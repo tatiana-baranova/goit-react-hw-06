@@ -1,5 +1,6 @@
 import './App.css'
 import ContactForm from './component/ContactForm/ContactForm'
+import ContactList from './component/ContactList/ContactList'
 import SearchBox from './component/SearchBar/SearchBar'
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       <div className="container">
         <h1 className="title">Phonebook</h1>
         <ContactForm/>
-        <SearchBox/>
+        <SearchBox />
+        <ContactList/>
       </div>
     </>
   )

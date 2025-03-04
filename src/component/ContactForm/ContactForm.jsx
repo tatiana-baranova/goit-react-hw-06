@@ -7,9 +7,7 @@ import { addContact } from '../../redux/contactsSlice';
 
 const validationSchema = Yup.object({
         name: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('Required'),
-        number: Yup.string()
-        .matches(/^\d{3}-\d{2}-\d{2}$/, 'Format: xxx-xx-xx')
-        .required('Required'),
+        number: Yup.string().min(3, 'Too Short!').max(50, 'Too Long!').required('Required'),
     });
 
 
