@@ -20,6 +20,12 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+    serializableCheck: {
+        ignoredActions: ["persist/PERSIST", "persist/REHYDRATE", "persist/REGISTER"], // 🔹 Додано ігнорування несеріалізованих значень
+    },
+    }),
 });
 
-export const persist = persistStore(store);
+export const persistor = persistStore(store);
