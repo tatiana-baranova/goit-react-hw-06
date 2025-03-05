@@ -1,5 +1,5 @@
 import { TbUserSearch } from "react-icons/tb";
-import s from './SearchBar.module.css'
+import s from './SearchBox.module.css'
 import { useDispatch, useSelector } from "react-redux";
 import { changeFilter } from "../../redux/filtersSlice";
 
